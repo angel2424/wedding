@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\fonts\\Roaster-Regular.otf":[["Roaster-Regular.bc5b60bf.otf","fonts/Roaster-Regular.otf"],"fonts/Roaster-Regular.otf"],"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\fonts\\Roaster-Light.otf":[["Roaster-Light.a1aeb57a.otf","fonts/Roaster-Light.otf"],"fonts/Roaster-Light.otf"],"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\fonts\\Roaster-Bold.otf":[["Roaster-Bold.ce83c14b.otf","fonts/Roaster-Bold.otf"],"fonts/Roaster-Bold.otf"],"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\images\\hero-bg.jpg":[["hero-bg.5ec24921.jpg","images/hero-bg.jpg"],"images/hero-bg.jpg"],"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\images\\rings.svg":[["rings.f2e12c33.svg","images/rings.svg"],"images/rings.svg"],"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\images\\tablet-hero-bg.jpg":[["tablet-hero-bg.cc71cd8a.jpg","images/tablet-hero-bg.jpg"],"images/tablet-hero-bg.jpg"],"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\images\\logo.jpg":[["logo.91778f73.jpg","images/logo.jpg"],"images/logo.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\fonts\\Roaster-Regular.otf":[["Roaster-Regular.bc5b60bf.otf","fonts/Roaster-Regular.otf"],"fonts/Roaster-Regular.otf"],"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\fonts\\Roaster-Light.otf":[["Roaster-Light.a1aeb57a.otf","fonts/Roaster-Light.otf"],"fonts/Roaster-Light.otf"],"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\fonts\\Roaster-Bold.otf":[["Roaster-Bold.ce83c14b.otf","fonts/Roaster-Bold.otf"],"fonts/Roaster-Bold.otf"],"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\images\\hero-bg.jpg":[["hero-bg.5ec24921.jpg","images/hero-bg.jpg"],"images/hero-bg.jpg"],"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\images\\rings.svg":[["rings.f2e12c33.svg","images/rings.svg"],"images/rings.svg"],"./..\\images\\logo.jpg":[["logo.91778f73.jpg","images/logo.jpg"],"images/logo.jpg"],"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\images\\tablet-hero-bg.jpg":[["tablet-hero-bg.cc71cd8a.jpg","images/tablet-hero-bg.jpg"],"images/tablet-hero-bg.jpg"],"C:\\Users\\SAM\\Documents\\Personal\\Websites\\wedding-site-01\\images\\logo.jpg":[["logo.91778f73.jpg","images/logo.jpg"],"images/logo.jpg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49808" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62371" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -3,7 +3,13 @@ import { Back, gsap } from "gsap";
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector('[data-scroll-container]'),
-    smooth: true
+    smooth: true,
+    tablet: {
+        smooth: true
+    },
+    smartphone: {
+        smooth: true
+    }
 });
 
 var tl = gsap.timeline();
