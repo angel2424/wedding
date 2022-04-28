@@ -531,12 +531,13 @@ header {
     }
 
     .tab_panel {
+        height: auto;
         margin: 50px 0;
     }
 
     .location {
         flex-direction: column;
-        padding: 150px 45px;
+        padding: 50px 45px;
     }
 
     .location__imgContainer {
@@ -551,9 +552,6 @@ header {
 
 @media screen and (max-width: 900px) {
 
-    .location {
-        margin: 150px 0;
-    }
     
     .location__img {
         width: 100%;
@@ -637,7 +635,7 @@ header {
     }
 
     .story {
-        height: auto;
+        height: 100%;
         padding: 70px 20px;
     }
     
@@ -654,11 +652,20 @@ header {
     }
 
     .story__textContainer {
+        height: 100%;
         padding: 0 20px;
     }
 
+    .tabs {
+        margin-bottom: 100px;
+    }
+
+    .tab_panel {
+        font-size: 16px;
+    }
+
     .location {
-        padding: 150px 20px;
+        padding: 40px 20px;
     }
 
     .location__infoContainer {
