@@ -21058,11 +21058,16 @@ tl.to(".nav__logo", {
   stagger: .1,
   ease: 'power2'
 }, '-=.5');
+tlIntro.to(".hero", {
+  'clip-path': 'polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)',
+  duration: 1.5,
+  ease: 'power2.out'
+});
 tlIntro.to(".hero__cta h1", {
   'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
   y: 0,
   opacity: 1
-});
+}, '-=1.5');
 tlIntro.to(".hero__cta span", {
   'clip-path': 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
   y: 0,
@@ -21071,10 +21076,8 @@ tlIntro.to(".hero__cta span", {
 tlIntro.to(".hero__slider", {
   'clip-path': 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)'
 }, '-=1.8');
-tlIntro.from(".hero__cta button", {
-  y: 100,
-  opacity: 0,
-  duration: 1
+tlIntro.to(".hero__cta button", {
+  opacity: 1
 }, '-=2');
 tlIntro.from(".hero__message p", {
   opacity: 0,
@@ -21137,7 +21140,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51555" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63922" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
