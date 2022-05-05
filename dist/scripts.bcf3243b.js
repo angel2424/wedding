@@ -21020,7 +21020,8 @@ var scroll = new _locomotiveScroll.default({
   },
   smartphone: {
     smooth: true
-  }
+  },
+  touchMultiplier: 3
 });
 
 var tl = _gsap.gsap.timeline();
@@ -21140,7 +21141,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58122" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57525" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

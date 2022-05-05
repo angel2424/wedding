@@ -475,6 +475,15 @@ header {
     padding: 100px 155px;
 }
 
+.gallery h2{
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    transition: ease .8s;
+}
+
+.gallery .title_reveal{
+    clip-path : polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+}
+
 .gallery__images {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -487,6 +496,11 @@ header {
     position: relative;
     background-color: #000;
     cursor: pointer;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.gallery__images .img_reveal {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 .gallery__item span {
@@ -524,6 +538,7 @@ header {
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 1;
+    transition: ease 1s;
 }
 
 .gallery__item--1 img {
@@ -535,6 +550,7 @@ header {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 1;
+    transition: ease 1.2s;
 }
 
 .gallery__item--3 {
@@ -542,6 +558,7 @@ header {
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 1;
+    transition: ease 1.4s;
 }
 
 .gallery__item--4 {
@@ -549,6 +566,7 @@ header {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
+    transition: ease 1s;
 }
 
 .gallery__item--4 img {
@@ -560,6 +578,7 @@ header {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
+    transition: ease 1.2s;
 }
 
 .gallery__item--6 {
@@ -567,6 +586,7 @@ header {
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 3;
+    transition: ease 1.4s;
 }
 
 .events {
@@ -575,6 +595,12 @@ header {
 
 .events h2 {
     text-align: center;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+    transition: ease .8s;
+}
+
+.events .title_reveal {
+    clip-path : polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
 }
 
 .timeline {
@@ -591,6 +617,12 @@ header {
     bottom: 0;
     left: 50%;
     margin-left: -2px;
+    height: 0;
+    transition: ease-in-out 3s;
+}
+
+.line_reveal .timeline::after {
+    height: 100%;
 }
 
 .container {
@@ -603,27 +635,42 @@ header {
     padding: 40px 100px 40px 50px;
 }
   
-/* The circles on the timeline */
+/* The lines on the timeline */
 .left::after {
     content: '';
     position: absolute;
-    width: 55px;
+    width: 0px;
     height: 3px;
     right: 0px;
     background-color: var(--accent-clr);
     top: 125px;
     z-index: 1;
+    transition: ease-in-out 2s;
 }
 
 .right::after {
     content: '';
     position: absolute;
-    width: 55px;
+    width: 0px;
     height: 3px;
     left: 0px;
     background-color: var(--accent-clr);
     top: 125px;
     z-index: 1;
+    transition: ease-in-out 2s;
+}
+
+.timeline .reveal::after {
+    width: 55px;
+}
+
+.content {
+    opacity: 0;
+    transition: ease .8s;
+}
+
+.reveal .content {
+    opacity: 1;
 }
 
 .content span{
@@ -876,6 +923,7 @@ header {
 
     .gallery__item:hover .gallery__img{
         opacity: 1;
+        transform: scale(1)
     }
     
     .gallery__item span {
@@ -1104,7 +1152,7 @@ header {
     }
 
     .location__infoContainer {
-        padding: 95px 0px;
+        padding: 35px 0px;
     }
  
     .gallery {
@@ -1163,17 +1211,43 @@ header {
     }
 
     .events {
-        padding: 100px 20px;
+        padding: 150px 20px;
     }
 
     .container {
-        padding: 80px 0px 80px 10px;
+        width: auto;
+        padding: 80px 0px 40px 90px;
         position: relative; 
-        width: 50%;
+    }
+
+    .left::after {
+        content: '';
+        position: absolute;
+        width: 0px;
+        height: 3px;
+        left: 0px;
+        background-color: var(--accent-clr);
+        top: 125px;
+        z-index: 1;
+        transition: ease-in-out 2s;
+    }
+
+    .timeline {
+        margin: 50px 20px;
+    }
+
+    .timeline::after {
+        left: 0%;
+    }
+
+    .left {
+        left: 0;
     }
     
     .right {
-        padding: 40px 5px 40px 25px;
+        width: auto;
+        padding: 10px 0px 40px 45px;
+        left: 0;
     }
 
 

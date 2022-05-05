@@ -10,7 +10,8 @@ const scroll = new LocomotiveScroll({
     },
     smartphone: {
         smooth: true
-    }
+    },
+    touchMultiplier: 3
 });
 
 var tl = gsap.timeline();
