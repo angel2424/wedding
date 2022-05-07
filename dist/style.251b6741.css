@@ -638,7 +638,7 @@ header {
 
 .content {
     opacity: 0;
-    transition: ease .8s;
+    transition: ease 1.5s;
 }
 
 .content span{
