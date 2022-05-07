@@ -57,13 +57,21 @@
                     <p>#J&S2022</p>
                 </div>
                 <div data-scroll data-scroll-speed="1" class="hero__slider">
-                    <img src="/images/hero-img.jpg" alt="John and Sarah engagement portrait">
+                    <picture>
+                        <source srcset="/images/hero-img.webp" type="image/webp">
+                        <source srcset="/images/hero-img.jpg" type="image/jpeg"> 
+                        <img src="/images/hero-img.jpg" alt="John and Sarah engagement portrait">
+                    </picture>
                 </div>
             </section>
 
             <section data-scroll class="story">
                 <div class="story__imgContainer" data-scroll data-scroll-speed="1.5">
-                    <img data-scroll data-scroll-class="slide_in" data-scroll-offset="200" src="/images/story-img.jpg" alt="couple-sitting" >
+                    <picture>
+                        <source srcset="/images/story-img.webp" type="image/webp">
+                        <source srcset="/images/story-img.jpg" type="image/jpeg"> 
+                        <img data-scroll data-scroll-class="slide_in" data-scroll-offset="200" src="/images/story-img.jpg" alt="couple-sitting" >
+                    </picture>
                     <h3 data-scroll data-scroll-class="slide_in" data-scroll-offset="-400">¡NOS CASAMOS!</h3>
                 </div>
                 <div class="story__textContainer">
@@ -100,7 +108,11 @@
                 <div class="location__imgContainer" data-scroll-speed="3">
                     <div data-scroll  data-scroll-repeat>
                         <div data-scroll data-scroll-speed="-1">
-                            <img  class="location__img" data-scroll data-scroll data-scroll-class="img_reveal" data-scroll-offset="200" src="/images/location-image.jpg" alt="Hotel Vamar Vallarta">
+                            <picture>
+                                <source srcset="/images/location-image.webp" type="image/webp">
+                                <source srcset="/images/location-image.jpg" type="image/jpeg"> 
+                                <img class="location__img" data-scroll data-scroll data-scroll-class="img_reveal" data-scroll-offset="200" src="/images/location-image.jpg" alt="Hotel Vamar Vallarta">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -228,6 +240,8 @@
                     <div class="hotel_container">
                         <div class="hotel__imgContainer">
                             <picture>
+                                <source srcset="/images/hotel-hilton.webp" type="image/webp">
+                                <source srcset="/images/hotel-hilton.jpg" type="image/jpeg"> 
                                 <img class="hotel__img" src="/images/hotel-hilton.jpg" alt="Couple image 5">
                             </picture>
                         </div>
