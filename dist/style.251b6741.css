@@ -679,11 +679,23 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 100px 0;
+    gap: 50px;
+}
+
+.hotel_container p {
+    text-align: left;
+}
+
+.hotel_container p, .hotel_container h3 {
+    opacity: 0;
+    transition: ease .8s;
 }
 
 .hotel__imgContainer {
     overflow: hidden;
     position: relative;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); /* This animations are achieved through locomotive scroll data-scroll-class and are defined in the animations section of this css file*/
+    transition: ease .8s;
 }
 
 .hotel__img {
@@ -741,6 +753,14 @@ header {
 
 .hotels .title_reveal { /* .hotels h2 */
     clip-path : polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+    opacity: 1;
+}
+
+.hotel_container .img_reveal { /* .gallery__item */
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.hotel_container .opacity { /* .content */
     opacity: 1;
 }
 
