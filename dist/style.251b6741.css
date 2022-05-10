@@ -27,6 +27,9 @@
     --section-padding: 0 155px;
     --roaster-font: 'Roaster', serif;
     --Poppins-font: 'Poppins', sans-serif;
+    --timeline: '0';
+    --timeline-lineWidthRight: '0';
+    --timeline-lineWidthLeft: '0';
 }
 
 * {
@@ -36,6 +39,10 @@
 body {
     margin: 0;
     padding: 0;
+}
+
+button {
+    color: #000;
 }
 
 a {
@@ -430,7 +437,6 @@ header {
 .location__img {
     transform: scale(1.2);
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); /* This animations are achieved through locomotive scroll data-scroll-class and are defined in the animations section of this css file*/
-    transition: ease 1.5s;
 }
 
 .location__infoContainer {
@@ -477,6 +483,7 @@ header {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 30vw);
     grid-gap: 15px;
+    margin-top: 50px;
 }
 
 .gallery__item {
@@ -485,6 +492,7 @@ header {
     background-color: #000;
     cursor: pointer;
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); /* This animations are achieved through locomotive scroll data-scroll-class and are defined in the animations section of this css file*/
+    transition: ease .4s;
 }
 
 .gallery__item span {
@@ -534,7 +542,7 @@ header {
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 1;
-    transition: ease 1.2s;
+    transition: ease .6s;
 }
 
 .gallery__item--3 {
@@ -542,7 +550,7 @@ header {
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 1;
-    transition: ease 1.4s;
+    transition: ease .6s;
 }
 
 .gallery__item--4 {
@@ -550,7 +558,7 @@ header {
     grid-column-end: 3;
     grid-row-start: 2;
     grid-row-end: 3;
-    transition: ease 1s;
+    transition: ease .6s;
 }
 
 .gallery__item--4 img {
@@ -562,7 +570,7 @@ header {
     grid-column-end: 4;
     grid-row-start: 2;
     grid-row-end: 3;
-    transition: ease 1.2s;
+    transition: ease .6s;
 }
 
 .gallery__item--6 {
@@ -570,7 +578,7 @@ header {
     grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 3;
-    transition: ease 1.4s;
+    transition: ease .6s;
 }
 
 .events {
@@ -592,7 +600,7 @@ header {
     content: '';
     position: absolute;
     width: 4px;
-    height: 0; /* This animations (timeline line) are achieved through locomotive scroll data-scroll-class and are defined in the animations section of this css file*/
+    height: var(--timeline);
     background-color: var(--accent-clr);
     top: 0;
     bottom: 0;
@@ -615,7 +623,7 @@ header {
 .left::after {
     content: '';
     position: absolute;
-    width: 0px; /* This animations (timeline line) are achieved through locomotive scroll data-scroll-class and are defined in the animations section of this css file*/
+    width: var(--timeline-lineWidthRight);
     height: 3px;
     right: 0px;
     background-color: var(--accent-clr);
@@ -627,7 +635,7 @@ header {
 .right::after {
     content: '';
     position: absolute;
-    width: 0px; /* This animations (timeline line) are achieved through locomotive scroll data-scroll-class and are defined in the animations section of this css file*/
+    width: var(--timeline-lineWidthLeft);
     height: 3px;
     left: 0px;
     background-color: var(--accent-clr);
@@ -742,11 +750,6 @@ header {
 .line_reveal .timeline::after { /* .timeline::after */
     height: 100%;
 }
-
-.timeline .reveal::after { /* .right::after and .left::after */
-    width: 55px;
-}
-
 .reveal .content { /* .content */
     opacity: 1;
 }
@@ -1202,7 +1205,7 @@ header {
 
     .story {
         height: 100%;
-        padding: 70px 20px;
+        padding: 50px 20px;
     }
     
     .story__imgContainer {
