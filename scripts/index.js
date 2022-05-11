@@ -5,6 +5,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const imagesLoaded = require("imagesloaded")
+
 
 const scroll = new LocomotiveScroll({
     el: document.querySelector('.scrollContainer'),
@@ -12,10 +14,13 @@ const scroll = new LocomotiveScroll({
     tablet: {
         smooth: true
     },
-    smartphone: {
-        smooth: true
-    },
     touchMultiplier: 2
+});
+
+let scrollContainer = document.querySelector(".scrollContainer");
+
+imagesLoaded(scrollContainer, { background: true }, function () {
+    scroll.update();
 });
 
 scroll.on("scroll", ScrollTrigger.update);
@@ -98,7 +103,9 @@ gsap.to(".location__img", {
         scroller: ".scrollContainer",
         trigger: ".location__imgContainer",
         start: "-50px bottom",
-    }
+    },
+    delay: .3,
+    duration: 1  
 });
 
 gsap.to(".location__infoContainer h2", {
@@ -179,9 +186,52 @@ gsap.to("html", {
     },
 });
 
+gsap.to(".content", {
+    opacity: 1,
+    scrollTrigger: {
+        scroller: ".scrollContainer",
+        trigger: ".timeline",
+        start: "top bottom",
+    },
+    stagger: 0.6
+});
 
+gsap.to(".hotel__imgContainer", {
+    'clip-path': 'polygon(0 0, 100% 0, 100% 100%, 0 100%)',
+    scrollTrigger: {
+        scroller: ".scrollContainer",
+        trigger: ".hotel__imgContainer",
+        start: "top bottom",
+    }
+});
 
+gsap.to(".hotels h2", {
+    'clip-path' : 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+    opacity: 1,
+    scrollTrigger: {
+        scroller: ".scrollContainer",
+        trigger: ".hotels",
+        start: "top bottom",
+    }
+});
 
+gsap.to(".hotel_container p", {
+    opacity: 1,
+    scrollTrigger: {
+        scroller: ".scrollContainer",
+        trigger: ".hotel_container",
+        start: "top bottom",
+    }
+});
+
+gsap.to(".hotel_container h3", {
+    opacity: 1,
+    scrollTrigger: {
+        scroller: ".scrollContainer",
+        trigger: ".hotel_container",
+        start: "top bottom",
+    }
+});
 
 
 

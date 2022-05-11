@@ -687,21 +687,26 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 100px 0;
-    gap: 50px;
+    gap: 80px;
+}
+
+.hotel_container h3 {
+    color: var(--secondary-clr);
+    font-weight: 400;
+    opacity: 0;
 }
 
 .hotel_container p {
     text-align: left;
+    opacity: 0;
 }
 
-.hotel_container p, .hotel_container h3 {
-    opacity: 0;
-    transition: ease .8s;
-}
 
 .hotel__imgContainer {
+    height: 60%;
     overflow: hidden;
     position: relative;
+    border: var(--accent-clr) 5px solid;
     clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); /* This animations are achieved through locomotive scroll data-scroll-class and are defined in the animations section of this css file*/
     transition: ease .8s;
 }
@@ -794,6 +799,10 @@ header {
     .gallery {
         padding: 100px 95px;
     }
+
+    .hotels {
+        padding: 100px 95px;
+    }
 }
 
 /* ------------ Media queries - Laptop screens ------------ */
@@ -874,6 +883,9 @@ header {
         padding: 40px 0px 40px 50px;
     }
 
+    .hotels{
+        padding: 100px 55px;
+    }
 
 }
 
@@ -1013,6 +1025,22 @@ header {
 
     .events {
         padding: 100px 45px;
+    }
+
+    .hotels {
+        padding: 100px 45px;
+    }
+
+    .hotels_container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        padding: 100px 0;
+        gap: 20px;
+    }
+
+    .hotel_container {
+        height: fit-content;
+        padding: 40px 0;
     }
 
 }
@@ -1334,5 +1362,16 @@ header {
         width: auto;
         padding: 10px 0px 40px 45px;
         left: 0;
+    }
+
+    .hotels {
+        padding: 50px 20px;
+    }
+
+    .hotels_container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 50px 0;
+        gap: 0;
     }
 }
